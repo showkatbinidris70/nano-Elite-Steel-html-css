@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Testimonial cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- used for clients list counter -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- Custom jquery -->
+    <script src="/assets/js/client-list.js"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;900&display=swap"
+        rel="stylesheet" />
+    <!-- Product Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+    <title>Elite Steel delivery-support</title>
+</head>
+
+<body>
+    <!-- Top Navbar -->
+    <div class="container-fluid bg-dark d-md-none d-lg-block">
+        <div class="container py-2">
+            <div class="">
+                <div class="row top-nav">
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#"><i class="fa-solid fa-envelope icon top-nav-icon"></i><span>
+                                needhelp@company.com</span></a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="#">
+                            <i class="fa-solid fa-phone-volume icon top-nav-icon"></i>
+                            <span> 92-888-666-0000</span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot icon top-nav-icon"></i><span> 80 Golden Street USA</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-end gap-2 top-nav-icons">
+                        <div>
+                            <a href="#"><i class="fa-brands fa-twitter top-nav-icon"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa-brands fa-facebook top-nav-icon"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa-brands fa-pinterest-p top-nav-icon"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa-brands fa-instagram top-nav-icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar  start-->
+    <nav class="sticky-div">
+        <div class="container-fluid nav-bg-color  navbar-border">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light nav-bg-colors">
+                    <div>
+                        <a class="navbar-brand logo img-fluid" href="/" onclick="route()"><img
+                                src="/assets/images/logo/logo.png" alt="logo" /></a>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span><i class="fas fa-bars" style="color:#fff; font-size:20px;"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse mt-1" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav mb-2 mb-lg-0 navbar-possition">
+                            <!-- <li class="nav-item">
+                            <a class="nav-link megamenu-color text-shadow-color " aria-current="page"
+                                href="/">Home</a>
+                        </li> -->
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    id='dropdownMenuButtonHome' href="#">
+                                    Home
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonHome">
+                                    <li><a class="dropdown-item" href="/pages/home/home-1.html">Home 1</a></li>
+                                    <li><a class="dropdown-item" href="/pages/home/home-2.html">Home 2</a></li>
+                                    <li><a class="dropdown-item" href="/pages/home/home-3.html">Home 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer "
+                                    id="dropdownMenuButtonAboutUS" href="#">
+                                    About Us
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonAboutUS">
+                                    <li><a class="dropdown-item" href="/pages/about-us/company-profile.html">Company
+                                            Profile</a></li>
+                                    <li><a class="dropdown-item" href="/pages/about-us/md-and-dmd-message.html">MD
+                                            & DMD’s Message</a></li>
+                                    <li><a class="dropdown-item" href="/pages/about-us/vision-and-mission.html">Vision &
+                                            Mission</a></li>
+                                    <li><a class="dropdown-item" href="/pages/about-us/future.html">The Future</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    id="dropdownMenuButtonProducts" href="#">
+                                    Products
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonProducts">
+                                    <li><a class="dropdown-item" href="/pages/products/Rebar.html">Why Rever ?</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/pages/products/60-grade-deformed-bar.html">60
+                                            Grade
+                                            Deformed Bar</a></li>
+                                    <li><a class="dropdown-item" href="/pages/products/product-price.html">Product
+                                            Price</a></li>
+                                    <li><a class="dropdown-item" href="/pages/products/product-development.html">Product
+                                            Development</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    id="dropdownMenuButtonQualityControl" href="#">
+                                    Quality
+                                    Control </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonQualityControl">
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/robust-analysis.html">Robust
+                                            Analysis</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/purity-from-the-start.html">Purity
+                                            from the start</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/dedicated-professionals.html">Dedicated
+                                            Professionals</a></li>
+                                    <li><a class="dropdown-item" href="/pages/quality-control/bar-marks.html">Bar
+                                            Marks</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/superior-product-quality.html">Superior
+                                            Product
+                                            Quality</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/chemical-properties.html">Chemical
+                                            Properties</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/mechanical-properties.html">Mechanical
+                                            Properties</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/BUET-test-report.html">BUET
+                                            Test Report</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/bendability.html">Bendability</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/quality-control/weldability.html">weldability</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    id="dropdownMenuButtonCustomerCare" href="#">
+                                    Customer
+                                    Care </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCustomerCare">
+                                    <li><a class="dropdown-item"
+                                            href="/pages/customer-care/commitment-customer-satisfaction.html">Commitment
+                                            Sustomer <br />Satisfaction</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/customer-care/delivery-support.html">Delivery
+                                            Support</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/pages/customer-care/correct-weightment.html">Correct
+                                            Weightment</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color"
+                                    href="/pages/clients-list/clients-list.html"> Key
+                                    Clients List </a>
+                            </li>
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    id="dropdownMenuButtonSisterConcerns" href="#">
+                                    Sister
+                                    Concerns </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSisterConcerns">
+                                    <li><a class="dropdown-item" href="https://elite-garments.com/"
+                                            target="_blank">Elite Garments <br />Industries Ltd.</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="https://mccibd.org/mcci_members/elite-iron-steel-industries-ltd/"
+                                            target="_blank">Elite Iron & <br />Steel Industries Ltd</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="https://mccibd.org/mcci_members/octagon-fibres-chemicals-ltd/"
+                                            target="_blank">Octagon Fibres & <br />Chemicals Ltd
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="http://www.aquapaints.com/" target="_blank">Aqua
+                                            Alkyd Resin</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="https://opencorporates.com/companies/bd/C-68977"
+                                            target="_blank">Aqua
+                                            Mineral Turpentine <br />& Solvents Plants Ltd</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="https://www.linkedin.com/company/elite-holding-group"
+                                            target="_blank">Elite
+                                            Holdings Ltd</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color"
+                                    href="/pages/contact-us/contact-us.html"> Contact Us </a>
+                            </li>
+                            <!-- <li class="nav-item dropdown has-megamenu">
+                                <a class="nav-link dropdown megamenu-color text-shadow-color" href="/contact-us"
+                                    onclick="route()" data-bs-toggle="dropdown"> Contact Us </a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link megamenu-color search-bar text-shadow-color" href="#"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
+                                        class="fa-solid fa-magnifying-glass"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdrop"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-control">
+            <div class="modal-content" id="addon-wrapping">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                    aria-describedby="addon-wrapping">
+            </div>
+        </div>
+    </div>
+    <!-- main content start -->
+    <div class="container mx-auto my-5">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <h2 class="text-center fw-bold mb-4 mt-2">Delivery Support</h2>
+                <p class="ps-3 pb-2">We effect delivery within the shortest possible time against receipt of orders from
+                    customers. Our marketing and sales division responds properly to the customers, then instantly
+                    process the work order and also maintain liaison to them to ensure prompt delivery.</p>
+                <ul class="list-group">
+                    <li class="list-group-item border-0"><i class="fa-sharp fa-solid fa-check text-danger"></i> Fast and
+                        reliable shipping</li>
+                    <li class="list-group-item border-0"><i class="fa-sharp fa-solid fa-check text-danger"></i> Global
+                        delivery options</li>
+                    <li class="list-group-item border-0"><i class="fa-sharp fa-solid fa-check text-danger"></i>
+                        Dedicated customer support</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-sm-6 hover-zoom">
+                <div class="hovereffect">
+                    <img src="/assets/images/delivery.jpg" class="img-fluid border border-5 border-secondary"
+                        alt="..." />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container mx-auto py-5">
+        <h1 class="text-center mb-5">Our Supports</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="card shadow mb-3" style="max-width: 540px; background-color: #f8f8f8;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/assets/images/lorry.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Order Collection</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow mb-3" style="max-width: 540px;background-color: #f8f8f8">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/assets/images/lorry.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Free shipping</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow mb-3" style="max-width: 540px;background-color: #f8f8f8">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/assets/images/lorry.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Ontime shipping</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow mb-3" style="max-width: 540px;background-color: #f8f8f8">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="/assets/images/lorry.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Compensation</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Start -->
+    <div class="container-fluid site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <a href="/"><img src="/assets/images/logo/logo.png" style="height: 4rem;" alt="footer logo" /></a>
+                    <p class="mt-2 d-flex justify-content-between">Lorem Ipsum is simply dummy text of the printing
+                        and
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                    <div class="d-grid col-6 pb-3">
+                        <a href="/pages/about-us/company-profile.html" class="btn btn-light read-more-btn">KNOW
+                            MORE</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="site-footer-list">
+                        <li>USEFUL LINKS </li>
+                        <li>Board of Directors</li>
+                        <li>Corporate Social</li>
+                        <li>Responsibility</li>
+                        <li>Supplier & Vendor</li>
+                        <li>Relations</li>
+                        <li>Achievements/ Awards</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6">
+                    <ul class="site-footer-list">
+                        <li>SHORTCUTS </li>
+                        <li>Landmark Projects</li>
+                        <li>News & Features</li>
+                        <li>Testimonials</li>
+                        <li>Offices and Plants</li>
+                        <li>Order Online</li>
+                        <li>Knowledge Hub</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="site-footer-list">
+                        <li>CONTACT US </li>
+                        <li><i class="fa-solid fa-phone-volume"></i> +88 02 3333 54901</li>
+                        <li><i class="fa-regular fa-envelope"></i> mail@elitesteel.com</li>
+                    </ul>
+                    <div class="embed-responsive embed-responsive-16by9 footer-map">
+                        <iframe class="embed-responsive-item w-100"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.982783606409!2d90.42129269678956!3d23.783627400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b903f021fd45%3A0x7ae5861fc753898c!2sNano%20Information%20Technology%20(Nanosoft)!5e0!3m2!1sen!2sbd!4v1696136843646!5m2!1sen!2sbd"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row mx-auto">
+                <div class="d-flex justify-content-center gap-4">
+
+                    <a href="#"><i class="fa-brands fa-twitter top-nav-icon rounded-circle bg-dark p-2"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-facebook top-nav-icon rounded-circle bg-dark p-2"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-pinterest-p top-nav-icon rounded-circle bg-dark p-2"></i></a>
+
+                    <a href="#"><i class="fa-brands fa-instagram top-nav-icon rounded-circle bg-dark p-2"></i></a>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <!-- <p>© Copyright 2023 by <span class="text-white fs-5"> ELITE STEEL </span></p> -->
+                    <p>© Copyright© 2012-2013 Elite Iron & Steel Industries Ltd. Developed By: Nano Information
+                        Technology</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
