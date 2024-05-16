@@ -20,6 +20,7 @@
     <!-- swipper carousel end -->
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/home4.style.css" />
     <!-- custom JS -->
     <script src="/assets/js/main.js"></script>
     <!-- slick carousel -->
@@ -32,163 +33,29 @@
     <!-- Product Slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
     <title>Elite Steel Home Page 3</title>
-    <style>
-        .home-4-title {
-            font-size: 60px;
-        }
-
-        .home-4-p-tag {
-            font-size: 20px;
-        }
-
-        .carousel-caption {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-    </style>
-    <style>
-        /*Zoom In start*/
-        figure {
-            overflow: hidden;
-        }
-
-        .slider-img-zoom {
-            overflow: hidden;
-        }
-
-        .zoomIn img {
-            display: block;
-            width: auto;
-            height: auto;
-        }
-
-        .zoomIn img {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transition: 0.5s linear;
-            transition: 0.5s linear;
-        }
-
-        .zoomIn:hover img {
-            -webkit-transform: scale(1.3);
-            transform: scale(1.2);
-        }
-
-        .slider-zoomIn img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .slider-zoomIn img {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transition: 10s linear;
-            transition: 10s linear;
-        }
-
-        .slider-zoomIn:hover img {
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-        }
-
-        .carousel-title-1 {
-            animation-duration: 5s;
-            animation-name: slider;
-            font-size: 45px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-                "Helvetica Neue", Arial, sans-serif;
-            background-color: #ffffffc5;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        @keyframes slider {
-            from {
-                margin-left: 20%;
-            }
-
-            to {
-                margin-left: 0%;
-            }
-        }
-
-        /* image zoom in zoom out end */
-    </style>
-    <style>
-        /* quote start */
-        .quote-bg-img {
-            background-image: url("/assets/images/quote-bg.jpg");
-            background-color: #cccccc;
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }       
-    </style>
-    <style>
-       
-    </style>
-    <!-- scroll -->
-    <style>
-        /* scrolling css start */
-        .carousel-title-1 {
-            animation-duration: 5s;
-            animation-name: slider;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            border-radius: 5px;
-        }
-
-        .carousel-title p {
-            line-height: 100%;
-            letter-spacing: 0.28px;
-            text-transform: uppercase;
-            color: #020071;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-        }
-
-        .carousel-title h4 {
-            color: #020071;
-        }
-
-        /* scrolling css end */
-    </style>
 </head>
 
 <body onload="myFunction()" style="margin:0;">
     <div id="loader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
         <!-- Top Navbar -->
-        <div class="container-fluid bg-dark d-md-none d-lg-block">
+        <div class="container-fluid bg-dark d-none d-lg-block">
             <div class="container py-2">
-                <div class="">
-                    <div class="row top-nav">
-                        <div class="col-md-3 col-sm-6">
-                            <a href="#"><i class="fa-solid fa-envelope icon top-nav-icon"></i><span>
-                                    needhelp@company.com</span></a>
+                <div class="row top-nav">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex gap-2">
+                            <div><a href="#"><i class="fa-solid fa-envelope icon top-nav-icon"></i><span>
+                                        needhelp@company.com</span></a></div>
+                            <div> <a href="#">
+                                    <i class="fa-solid fa-phone-volume icon top-nav-icon"></i>
+                                    <span> 92-888-666-0000</span>
+                                </a></div>
+                            <div><a href="#">
+                                    <i class="fa-solid fa-location-dot icon top-nav-icon"></i><span> 80 Golden Street
+                                        USA</span>
+                                </a></div>
                         </div>
-                        <div class="col-md-2 col-sm-6">
-                            <a href="#">
-                                <i class="fa-solid fa-phone-volume icon top-nav-icon"></i>
-                                <span> 92-888-666-0000</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="#">
-                                <i class="fa-solid fa-location-dot icon top-nav-icon"></i><span> 80 Golden Street
-                                    USA</span>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6 d-flex justify-content-end gap-2 top-nav-icons">
+                        <div class="d-flex justify-content-end gap-2 top-nav-icons">
                             <div>
                                 <a href="#"><i class="fa-brands fa-twitter top-nav-icon"></i></a>
                             </div>
@@ -204,12 +71,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="row top-nav d-none">
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#"><i class="fa-solid fa-envelope icon top-nav-icon"></i><span>
+                                needhelp@company.com</span></a>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <a href="#">
+                            <i class="fa-solid fa-phone-volume icon top-nav-icon"></i>
+                            <span> 92-888-666-0000</span>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot icon top-nav-icon"></i><span> 80 Golden Street
+                                USA</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 d-flex justify-content-end gap-2 top-nav-icons">
+                        <div>
+                            <a href="#"><i class="fa-brands fa-twitter top-nav-icon"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa-brands fa-facebook top-nav-icon"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa-brands fa-pinterest-p top-nav-icon"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa-brands fa-instagram top-nav-icon"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Navbar  start-->
         <nav class="sticky-div">
             <div class="container-fluid nav-bg-color  navbar-border">
-                <div class="container">
+                <div class="container sticky-top">
                     <nav class="navbar navbar-expand-lg navbar-light nav-bg-colors">
                         <div>
                             <a class="navbar-brand logo img-fluid" href="/" onclick="route()"><img
@@ -223,10 +122,6 @@
                         </button>
                         <div class="collapse navbar-collapse mt-1" id="navbarTogglerDemo02">
                             <ul class="navbar-nav mb-2 mb-lg-0 navbar-possition">
-                                <!-- <li class="nav-item">
-                                <a class="nav-link megamenu-color text-shadow-color " aria-current="page"
-                                    href="/">Home</a>
-                            </li> -->
                                 <li class="nav-item dropdown has-megamenu">
                                     <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
                                         id='dropdownMenuButtonHome' href="#">
@@ -372,10 +267,6 @@
                                     <a class="nav-link dropdown megamenu-color text-shadow-color"
                                         href="/pages/contact-us/contact-us.html"> Contact Us </a>
                                 </li>
-                                <!-- <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color" href="/contact-us"
-                                        onclick="route()" data-bs-toggle="dropdown"> Contact Us </a>
-                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link megamenu-color search-bar text-shadow-color" href="#"
                                         data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
@@ -392,8 +283,17 @@
             aria-labelledby="staticBackdrop" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-control">
                 <div class="modal-content" id="addon-wrapping">
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Username"
-                        aria-describedby="addon-wrapping">
+                    <div class="input-group">
+                        <input class="form-control border-end-0 border" type="search" value="search"
+                            id="example-search-input">
+                        <span class="input-group-append">
+                            <button
+                                class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                                type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

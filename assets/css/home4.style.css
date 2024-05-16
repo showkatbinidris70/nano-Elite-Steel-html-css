@@ -1,0 +1,119 @@
+.home-4-title {
+  font-size: 60px;
+}
+
+.home-4-p-tag {
+  font-size: 20px;
+}
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/*Zoom In start*/
+figure {
+  overflow: hidden;
+}
+
+.slider-img-zoom {
+  overflow: hidden;
+}
+
+.zoomIn img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.zoomIn img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.zoomIn:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.2);
+}
+
+.slider-zoomIn img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slider-zoomIn img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 10s linear;
+  transition: 10s linear;
+}
+
+.slider-zoomIn:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.carousel-title-1 {
+  animation-duration: 5s;
+  animation-name: slider;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffffc5;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@keyframes slider {
+  from {
+    margin-left: 20%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+/* image zoom in zoom out end */
+/* quote start */
+.quote-bg-img {
+  background-image: url("/assets/images/quote-bg.jpg");
+  background-color: #cccccc;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* scrolling css start */
+.carousel-title-1 {
+  animation-duration: 5s;
+  animation-name: slider;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.carousel-title p {
+  line-height: 100%;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  color: #020071;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.carousel-title h4 {
+  color: #020071;
+}
+
+/* scrolling css end */

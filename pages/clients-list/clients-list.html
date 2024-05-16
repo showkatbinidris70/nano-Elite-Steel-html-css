@@ -71,7 +71,7 @@
     <!-- Navbar  start-->
     <nav class="sticky-div">
         <div class="container-fluid nav-bg-color  navbar-border">
-            <div class="container">
+            <div class="container sticky-top">
                 <nav class="navbar navbar-expand-lg navbar-light nav-bg-colors">
                     <div>
                         <a class="navbar-brand logo img-fluid" href="/" onclick="route()"><img
@@ -79,16 +79,12 @@
                     </div>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span><i class="fas fa-bars" style="color:#fff; font-size:20px;"></i></span>
                     </button>
                     <div class="collapse navbar-collapse mt-1" id="navbarTogglerDemo02">
                         <ul class="navbar-nav mb-2 mb-lg-0 navbar-possition">
-                            <!-- <li class="nav-item">
-                            <a class="nav-link megamenu-color text-shadow-color " aria-current="page"
-                                href="/">Home</a>
-                        </li> -->
                             <li class="nav-item dropdown has-megamenu">
                                 <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
                                     id='dropdownMenuButtonHome' href="#">
@@ -98,6 +94,7 @@
                                     <li><a class="dropdown-item" href="/pages/home/home-1.html">Home 1</a></li>
                                     <li><a class="dropdown-item" href="/pages/home/home-2.html">Home 2</a></li>
                                     <li><a class="dropdown-item" href="/pages/home/home-3.html">Home 3</a></li>
+                                    <li><a class="dropdown-item" href="/pages/home/home-4.html">Home 4</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown has-megamenu">
@@ -110,7 +107,8 @@
                                             Profile</a></li>
                                     <li><a class="dropdown-item" href="/pages/about-us/md-and-dmd-message.html">MD
                                             & DMD’s Message</a></li>
-                                    <li><a class="dropdown-item" href="/pages/about-us/vision-and-mission.html">Vision &
+                                    <li><a class="dropdown-item"
+                                            href="/pages/about-us/vision-and-mission.html">Vision &
                                             Mission</a></li>
                                     <li><a class="dropdown-item" href="/pages/about-us/future.html">The Future</a>
                                     </li>
@@ -124,12 +122,14 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonProducts">
                                     <li><a class="dropdown-item" href="/pages/products/Rebar.html">Why Rever ?</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="/pages/products/60-grade-deformed-bar.html">60
+                                    <li><a class="dropdown-item"
+                                            href="/pages/products/60-grade-deformed-bar.html">60
                                             Grade
                                             Deformed Bar</a></li>
                                     <li><a class="dropdown-item" href="/pages/products/product-price.html">Product
                                             Price</a></li>
-                                    <li><a class="dropdown-item" href="/pages/products/product-development.html">Product
+                                    <li><a class="dropdown-item"
+                                            href="/pages/products/product-development.html">Product
                                             Development</a></li>
                                 </ul>
                             </li>
@@ -210,10 +210,12 @@
                                             target="_blank">Octagon Fibres & <br />Chemicals Ltd
                                         </a>
                                     </li>
-                                    <li><a class="dropdown-item" href="http://www.aquapaints.com/" target="_blank">Aqua
+                                    <li><a class="dropdown-item" href="http://www.aquapaints.com/"
+                                            target="_blank">Aqua
                                             Alkyd Resin</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="https://opencorporates.com/companies/bd/C-68977"
+                                    <li><a class="dropdown-item"
+                                            href="https://opencorporates.com/companies/bd/C-68977"
                                             target="_blank">Aqua
                                             Mineral Turpentine <br />& Solvents Plants Ltd</a>
                                     </li>
@@ -228,10 +230,6 @@
                                 <a class="nav-link dropdown megamenu-color text-shadow-color"
                                     href="/pages/contact-us/contact-us.html"> Contact Us </a>
                             </li>
-                            <!-- <li class="nav-item dropdown has-megamenu">
-                                <a class="nav-link dropdown megamenu-color text-shadow-color" href="/contact-us"
-                                    onclick="route()" data-bs-toggle="dropdown"> Contact Us </a>
-                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link megamenu-color search-bar text-shadow-color" href="#"
                                     data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
@@ -260,7 +258,8 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="client-iframe" src="https://www.youtube.com/embed/G034cOM2th8?autoplay=1&mute=1"
+                        <iframe class="client-iframe vh-100"
+                            src="https://www.youtube.com/embed/G034cOM2th8?autoplay=1&mute=1"
                             title="YouTube video player" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -273,14 +272,16 @@
                 </div>
                 <div class="carousel-item">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="client-iframe" src="https://www.youtube.com/embed/mxAmgrRXcf4?autoplay=1&mute=1"
+                        <iframe class="client-iframe vh-100"
+                            src="https://www.youtube.com/embed/mxAmgrRXcf4?autoplay=1&mute=1"
                             title="YouTube video player" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="client-iframe" src="https://www.youtube.com/embed/XohCt4XhgU4?autoplay=1&mute=1"
+                        <iframe class="client-iframe vh-100"
+                            src="https://www.youtube.com/embed/XohCt4XhgU4?autoplay=1&mute=1"
                             title="YouTube video player" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

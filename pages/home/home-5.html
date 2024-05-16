@@ -2,1148 +2,462 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Fontawesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- Testimonial cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- used for clients list counter -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <!-- swipper carousel start -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- swipper carousel end -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap 5 main.css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- custom css -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <!-- custom JS -->
-    <script src="/assets/js/main.js"></script>
-    <!-- slick carousel -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet" />
-    <!-- Font Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;900&display=swap"
-        rel="stylesheet" />
-    <!-- Product Slider -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
-    <title>Elite Steel Home Page 3</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/home5.style.css">
+    <title>Document</title>
     <style>
-        .home-4-title {
-            font-size: 60px;
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+        :root {
+            --font3: 'Roboto', sans-serif;
         }
 
-        .home-4-p-tag {
-            font-size: 20px;
+        .h1,
+        h1 {
+            font-size: 1.5rem;
         }
 
-        .carousel-caption {
+        .container-fluid {
+            max-width: 1400px;
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+            border: 1;
+            border-radius: 1rem;
+        }
+
+        .img-hover-zoom--colorize img {
+            border-radius: 50%;
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+            padding: 1px;
+            transition: transform .5s;
+            filter: grayscale(100%);
+        }
+
+        .img-hover-zoom--colorize:hover img {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .card h5 {
+            overflow: hidden;
+            height: 80px;
+            font-weight: 300;
+            font-size: 1rem;
+        }
+
+        .card h5 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .role {
+            color: #7a7a7a;
+        }
+
+        .box {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100%;
-        }
-    </style>
-    <style>
-        /*Zoom In start*/
-        figure {
-            overflow: hidden;
+            justify-content: center;
         }
 
-        .slider-img-zoom {
-            overflow: hidden;
+        .fab {
+            font-size: 1.5rem;
+            color: darkgray;
+            transition: transform .5s;
         }
 
-        .zoomIn img {
-            display: block;
-            width: auto;
-            height: auto;
+        .fab:hover {
+            color: black;
+            transform: scale(1.1);
         }
 
-        .zoomIn img {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transition: 0.5s linear;
-            transition: 0.5s linear;
+        .card h2 {
+            font-size: 1rem;
         }
 
-        .zoomIn:hover img {
-            -webkit-transform: scale(1.3);
-            transform: scale(1.2);
-        }
 
-        .slider-zoomIn img {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
+        /* MEDIA */
 
-        .slider-zoomIn img {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            -webkit-transition: 10s linear;
-            transition: 10s linear;
-        }
-
-        .slider-zoomIn:hover img {
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-        }
-
-        .carousel-title-1 {
-            animation-duration: 5s;
-            animation-name: slider;
-            font-size: 45px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-                "Helvetica Neue", Arial, sans-serif;
-            background-color: #ffffffc5;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        @keyframes slider {
-            from {
-                margin-left: 20%;
-            }
-
-            to {
-                margin-left: 0%;
+        @media only screen and (min-width: 1200px) {
+            .img-hover-zoom--colorize img {
+                width: 200px;
             }
         }
 
-        /* image zoom in zoom out end */
-    </style>
-    <style>
-        /* quote start */
-        .quote-bg-img {
-            background-image: url("/assets/images/quote-bg.jpg");
-            background-color: #cccccc;
-            width: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
-    <!-- scroll -->
-    <style>
-        /* scrolling css start */
-        .carousel-title-1 {
-            animation-duration: 5s;
-            animation-name: slider;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            border-radius: 5px;
-        }
+        @media only screen and (min-width: 1200px) {
 
-        .carousel-title p {
-            line-height: 100%;
-            letter-spacing: 0.28px;
-            text-transform: uppercase;
-            color: #020071;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-        }
-
-        .carousel-title h4 {
-            color: #020071;
-        }
-
-        /* scrolling css end */
-    </style>
-    <style>
-        @media only screen and (min-width: 992px) {
-            .dropdown:hover .dropdown-menu {
-                display: flex;
-            }
-
-            .dropdown-menu.show {
-                display: flex;
-            }
-        }
-
-        .dropdown-menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .dropdown-menu li .dropdown-item {
-            color: gray;
-            font-size: 1em;
-            padding: 0.5em 1em;
-        }
-
-
-
-        .dropdown-menu li:first-child a {
-            font-weight: normal;
-            font-size: 1em;
-            text-transform: uppercase;
-            color: #516beb;
-        }
-
-
-        @media only screen and (max-width: 992px) {
-            .dropdown-menu.show {
-                flex-wrap: wrap;
-                max-height: 350px;
-                overflow-y: scroll;
-            }
-        }
-
-        @media only screen and (min-width: 992px) and (max-width: 1140px) {
-            .dropdown:hover .dropdown-menu {
-                width: 40vw;
-                flex-wrap: wrap;
-            }
-        }
-
-        @media screen and (min-width: 993px) {
-            .dropdown:hover .dropdown-menu {
-                display: flex;
-            }
-
-            .dropdown-menu.show {
-                display: flex;
-            }
-        }
-
-        @media screen and (max-width: 992px) {
-            .dropdown-menu.show {
-                max-height: 60vh;
-                overflow-y: scroll;
+            .h1,
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 
-<body onload="myFunction()" style="margin:0;">
-    <div id="loader"></div>
-    <div style="display:none;" id="myDiv" class="animate-bottom">
-        <!-- Top Navbar -->
-        <div class="container-fluid bg-dark d-md-none d-lg-block">
-            <div class="container py-2">
-                <div class="">
-                    <div class="row top-nav">
-                        <div class="col-md-3 col-sm-6">
-                            <a href="#"><i class="fa-solid fa-envelope icon top-nav-icon"></i><span>
-                                    needhelp@company.com</span></a>
-                        </div>
-                        <div class="col-md-2 col-sm-6">
-                            <a href="#">
-                                <i class="fa-solid fa-phone-volume icon top-nav-icon"></i>
-                                <span> 92-888-666-0000</span>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <a href="#">
-                                <i class="fa-solid fa-location-dot icon top-nav-icon"></i><span> 80 Golden Street
-                                    USA</span>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6 d-flex justify-content-end gap-2 top-nav-icons">
-                            <div>
-                                <a href="#"><i class="fa-brands fa-twitter top-nav-icon"></i></a>
-                            </div>
-                            <div>
-                                <a href="#"><i class="fa-brands fa-facebook top-nav-icon"></i></a>
-                            </div>
-                            <div>
-                                <a href="#"><i class="fa-brands fa-pinterest-p top-nav-icon"></i></a>
-                            </div>
-                            <div>
-                                <a href="#"><i class="fa-brands fa-instagram top-nav-icon"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar  start-->
-        <nav class="sticky-div">
-            <div class="container-fluid nav-bg-color  navbar-border">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light nav-bg-colors">
-                        <div>
-                            <a class="navbar-brand logo img-fluid" href="/" onclick="route()"><img
-                                    src="/assets/images/logo/logo.png" alt="logo" /></a>
-                        </div>
-
+<body>
+    <header class="agency-theme-header">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid px-0">
+                        <a class="navbar-brand" href="/">
+                            <h3 class="fs-3 text-dark">Nano</h3>
+                        </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span><i class="fas fa-bars" style="color:#fff; font-size:20px;"></i></span>
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse mt-1" id="navbarTogglerDemo02">
-                            <ul class="navbar-nav mb-2 mb-lg-0 navbar-possition">
-                                <!-- <li class="nav-item">
-                                <a class="nav-link megamenu-color text-shadow-color " aria-current="page"
-                                    href="/">Home</a>
-                            </li> -->
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
-                                        id='dropdownMenuButtonHome' href="#">
-                                        Home
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li><a class="dropdown-item" href="/pages/home/home-1.html">Home 1</a></li>
-                                            <li><a class="dropdown-item" href="/pages/home/home-2.html">Home 2</a></li>
-                                            <li><a class="dropdown-item" href="/pages/home/home-3.html">Home 3</a></li>
-                                            <li><a class="dropdown-item" href="/pages/home/home-4.html">Home 4</a></li>
-                                            <li><a class="dropdown-item" href="/pages/home/home-5.html">Home 5</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonHome">
-                                        <li><a class="dropdown-item" href="/pages/home/home-1.html">Home 1</a></li>
-                                        <li><a class="dropdown-item" href="/pages/home/home-2.html">Home 2</a></li>
-                                        <li><a class="dropdown-item" href="/pages/home/home-3.html">Home 3</a></li>
-                                        <li><a class="dropdown-item" href="/pages/home/home-4.html">Home 4</a></li>
-                                    </ul> -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-md-auto gap-2">
+                                <li class="nav-item rounded">
+                                    <a class="nav-link active" aria-current="page" href="#"><i
+                                            class="bi bi-house-fill me-2"></i>About</a>
                                 </li>
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer "
-                                        id="dropdownMenuButtonAboutUS" href="#">
-                                        About Us
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonAboutUS">
-                                        <ul>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/about-us/company-profile.html">Company
-                                                    Profile</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/about-us/md-and-dmd-message.html">MD
-                                                    & DMD’s Message</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/about-us/vision-and-mission.html">Vision &
-                                                    Mission</a></li>
-                                            <li><a class="dropdown-item" href="/pages/about-us/future.html">The
-                                                    Future</a>
-                                            </li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonAboutUS">
-                                        <li><a class="dropdown-item" href="/pages/about-us/company-profile.html">Company
-                                                Profile</a></li>
-                                        <li><a class="dropdown-item" href="/pages/about-us/md-and-dmd-message.html">MD
-                                                & DMD’s Message</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/about-us/vision-and-mission.html">Vision &
-                                                Mission</a></li>
-                                        <li><a class="dropdown-item" href="/pages/about-us/future.html">The Future</a>
-                                        </li>
-                                    </ul> -->
+                                <li class="nav-item rounded">
+                                    <a class="nav-link" href="#"><i class="bi bi-people-fill me-2"></i>Services</a>
                                 </li>
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
-                                        id="dropdownMenuButtonProducts" href="#">
-                                        Products
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li><a class="dropdown-item" href="/pages/products/Rebar.html">Why Rever
-                                                    ?</a>
-                                            </li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/products/60-grade-deformed-bar.html">60
-                                                    Grade
-                                                    Deformed Bar</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/products/product-price.html">Product
-                                                    Price</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/products/product-development.html">Product
-                                                    Development</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonProducts">
-                                        <li><a class="dropdown-item" href="/pages/products/Rebar.html">Why Rever ?</a>
-                                        </li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/products/60-grade-deformed-bar.html">60
-                                                Grade
-                                                Deformed Bar</a></li>
-                                        <li><a class="dropdown-item" href="/pages/products/product-price.html">Product
-                                                Price</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/products/product-development.html">Product
-                                                Development</a></li>
-                                    </ul> -->
+                                <li class="nav-item rounded">
+                                    <a class="nav-link" href="#"><i class="bi bi-people-fill me-2"></i>Projects</a>
                                 </li>
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
-                                        id="dropdownMenuButtonQualityControl" href="#">
-                                        Quality
-                                        Control </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonAboutUS">
-                                        <ul>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/robust-analysis.html">Robust
-                                                    Analysis</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/purity-from-the-start.html">Purity
-                                                    from the start</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/dedicated-professionals.html">Dedicated
-                                                    Professionals</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/bar-marks.html">Bar
-                                                    Marks</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/superior-product-quality.html">Superior
-                                                    Product
-                                                    Quality</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/chemical-properties.html">Chemical
-                                                    Properties</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/mechanical-properties.html">Mechanical
-                                                    Properties</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/BUET-test-report.html">BUET
-                                                    Test Report</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/bendability.html">Bendability</a>
-                                            </li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/quality-control/weldability.html">weldability</a>
-                                            </li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonQualityControl">
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/robust-analysis.html">Robust
-                                                Analysis</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/purity-from-the-start.html">Purity
-                                                from the start</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/dedicated-professionals.html">Dedicated
-                                                Professionals</a></li>
-                                        <li><a class="dropdown-item" href="/pages/quality-control/bar-marks.html">Bar
-                                                Marks</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/superior-product-quality.html">Superior
-                                                Product
-                                                Quality</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/chemical-properties.html">Chemical
-                                                Properties</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/mechanical-properties.html">Mechanical
-                                                Properties</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/BUET-test-report.html">BUET
-                                                Test Report</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/bendability.html">Bendability</a>
-                                        </li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/quality-control/weldability.html">weldability</a>
-                                        </li>
-                                    </ul> -->
-                                </li>
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
-                                        id="dropdownMenuButtonCustomerCare" href="#">
-                                        Customer
-                                        Care </a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/customer-care/commitment-customer-satisfaction.html">Commitment
-                                                    Sustomer <br />Satisfaction</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/customer-care/delivery-support.html">Delivery
-                                                    Support</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="/pages/customer-care/correct-weightment.html">Correct
-                                                    Weightment</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                            <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCustomerCare">
-                                        <li><a class="dropdown-item"
-                                                href="/pages/customer-care/commitment-customer-satisfaction.html">Commitment
-                                                Sustomer <br />Satisfaction</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/customer-care/delivery-support.html">Delivery
-                                                Support</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="/pages/customer-care/correct-weightment.html">Correct
-                                                Weightment</a></li>
-                                    </ul> -->
-                                </li>
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color"
-                                        href="/pages/clients-list/clients-list.html"> Key
-                                        Clients List </a>
-                                </li>
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
-                                        id="dropdownMenuButtonSisterConcerns" href="#">
-                                        Sister
-                                        Concerns </a>
-                                    <div class="dropdown-menu">
-                                        <ul>
-                                            <li><a class="dropdown-item" href="https://elite-garments.com/"
-                                                    target="_blank">Elite Garments <br />Industries Ltd.</a></li>
-                                            <li><a class="dropdown-item"
-                                                    href="https://mccibd.org/mcci_members/elite-iron-steel-industries-ltd/"
-                                                    target="_blank">Elite Iron & <br />Steel Industries Ltd</a>
-                                            </li>
-                                            <li><a class="dropdown-item"
-                                                    href="https://mccibd.org/mcci_members/octagon-fibres-chemicals-ltd/"
-                                                    target="_blank">Octagon Fibres & <br />Chemicals Ltd
-                                                </a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="http://www.aquapaints.com/"
-                                                    target="_blank">Aqua
-                                                    Alkyd Resin</a>
-                                            </li>
-                                            <li><a class="dropdown-item"
-                                                    href="https://opencorporates.com/companies/bd/C-68977"
-                                                    target="_blank">Aqua
-                                                    Mineral Turpentine <br />& Solvents Plants Ltd</a>
-                                            </li>
-                                            <li><a class="dropdown-item"
-                                                    href="https://www.linkedin.com/company/elite-holding-group"
-                                                    target="_blank">Elite
-                                                    Holdings Ltd</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonSisterConcerns">
-                                        <li><a class="dropdown-item" href="https://elite-garments.com/"
-                                                target="_blank">Elite Garments <br />Industries Ltd.</a></li>
-                                        <li><a class="dropdown-item"
-                                                href="https://mccibd.org/mcci_members/elite-iron-steel-industries-ltd/"
-                                                target="_blank">Elite Iron & <br />Steel Industries Ltd</a>
-                                        </li>
-                                        <li><a class="dropdown-item"
-                                                href="https://mccibd.org/mcci_members/octagon-fibres-chemicals-ltd/"
-                                                target="_blank">Octagon Fibres & <br />Chemicals Ltd
-                                            </a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="http://www.aquapaints.com/"
-                                                target="_blank">Aqua
-                                                Alkyd Resin</a>
-                                        </li>
-                                        <li><a class="dropdown-item"
-                                                href="https://opencorporates.com/companies/bd/C-68977"
-                                                target="_blank">Aqua
-                                                Mineral Turpentine <br />& Solvents Plants Ltd</a>
-                                        </li>
-                                        <li><a class="dropdown-item"
-                                                href="https://www.linkedin.com/company/elite-holding-group"
-                                                target="_blank">Elite
-                                                Holdings Ltd</a>
-                                        </li>
-                                    </ul> -->
-                                </li>
-                                <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color"
-                                        href="/pages/contact-us/contact-us.html"> Contact Us </a>
-                                </li>
-                                <!-- <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color" href="/contact-us"
-                                        onclick="route()" data-bs-toggle="dropdown"> Contact Us </a>
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link megamenu-color search-bar text-shadow-color" href="#"
-                                        data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                            class="fa-solid fa-magnifying-glass"></i></a>
+                                <li class="nav-item rounded">
+                                    <a class="nav-link" href="#"><i class="bi bi-people-fill me-2"></i>Contact</a>
                                 </li>
                             </ul>
                         </div>
-                    </nav>
-                </div>
-            </div>
-        </nav>
-        <!-- Navbar Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdrop" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-control">
-                <div class="modal-content" id="addon-wrapping">
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Username"
-                        aria-describedby="addon-wrapping">
-                </div>
+                    </div>
+                </nav>
             </div>
         </div>
-        <!-- main content start -->
-        <!-- Design and content inspired from Giulio Cuscito :- https://dribbble.com/shots/7129691--Blue-Planet-Carousel-Concept -->
-        <div class='c-socials'>
-            <ul class='c-socials__list'>
-                <li class='c-socials__list-item'><a href='' title=''><svg height="512" viewBox="0 0 24 24" width="512"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M3 24h9v-8.25H9V12h3V9c0-2.486 2.014-4.5 4.5-4.5h3v3.75H18c-.828 0-1.5-.078-1.5.75v3h3.75l-1.5 3.75H16.5V24H21c1.654 0 3-1.346 3-3V3c0-1.655-1.346-3-3-3H3C1.345 0 0 1.345 0 3v18c0 1.654 1.345 3 3 3z" />
-                        </svg></a></li>
-                <li class='c-socials__list-item'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path
-                            d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
-                    </svg>
-                    <a href='' title=''></a>
-                </li>
-                <li class='c-socials__list-item'><a href='' title=''><svg height="512pt" viewBox="0 0 512 512.00006"
-                            width="512pt" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M261.039062 512c-1.695312 0-3.390624 0-5.097656-.007812-40.132812.097656-77.214844-.921876-113.277344-3.117188-33.0625-2.011719-63.242187-13.4375-87.28125-33.039062-23.195312-18.914063-39.035156-44.488282-47.078124-76.003907-7-27.4375-7.371094-54.371093-7.726563-80.421875C.320312 300.71875.0546875 278.570312 0 256.046875c.0546875-22.617187.320312-44.765625.578125-63.457031.355469-26.046875.726563-52.980469 7.726563-80.421875C16.347656 80.652344 32.1875 55.078125 55.382812 36.164062 79.421875 16.5625 109.601562 5.136719 142.667969 3.125 178.730469.933594 215.820312-.0898438 256.039062.0078125 296.183594-.078125 333.253906.933594 369.316406 3.125c33.0625 2.011719 63.242188 13.4375 87.28125 33.039062 23.199219 18.914063 39.035156 44.488282 47.078125 76.003907 7 27.4375 7.371094 54.375 7.726563 80.421875.257812 18.691406.527344 40.839844.578125 63.363281v.09375c-.050781 22.523437-.320313 44.671875-.578125 63.363281-.355469 26.046875-.722656 52.980469-7.726563 80.421875-8.042969 31.515625-23.878906 57.089844-47.078125 76.003907-24.039062 19.601562-54.21875 31.027343-87.28125 33.039062C334.78125 510.976562 299.304688 512 261.039062 512zm-5.097656-40.007812c39.480469.09375 75.730469-.902344 110.945313-3.042969 25-1.519531 46.675781-9.632813 64.433593-24.113281 16.414063-13.386719 27.71875-31.855469 33.597657-54.894532 5.828125-22.839844 6.164062-47.363281 6.488281-71.078125.253906-18.566406.519531-40.558593.574219-62.863281-.054688-22.308594-.320313-44.296875-.574219-62.863281-.324219-23.714844-.660156-48.238281-6.488281-71.082031-5.878907-23.039063-17.183594-41.507813-33.597657-54.894532-17.757812-14.476562-39.433593-22.589844-64.433593-24.109375-35.214844-2.144531-71.464844-3.132812-110.851563-3.046875-39.472656-.09375-75.726562.902344-110.941406 3.046875-25 1.519531-46.675781 9.632813-64.433594 24.109375-16.414062 13.386719-27.71875 31.855469-33.597656 54.894532-5.828125 22.84375-6.164062 47.363281-6.488281 71.082031-.253907 18.582031-.519531 40.585937-.574219 62.910156.054688 22.226563.320312 44.234375.574219 62.816406.324219 23.714844.660156 48.238281 6.488281 71.078125 5.878906 23.039063 17.183594 41.507813 33.597656 54.894532 17.757813 14.476562 39.433594 22.589843 64.433594 24.109374 35.214844 2.144532 71.476562 3.144532 110.847656 3.046876zM254.988281 381c-68.921875 0-125-56.074219-125-125s56.078125-125 125-125c68.925781 0 125 56.074219 125 125s-56.074219 125-125 125zm0-210c-46.867187 0-85 38.132812-85 85s38.132813 85 85 85c46.871094 0 85-38.132812 85-85s-38.128906-85-85-85zm139-80c-16.566406 0-30 13.429688-30 30s13.433594 30 30 30c16.570313 0 30-13.429688 30-30s-13.429687-30-30-30zm0 0" />
-                        </svg></a></li>
-            </ul>
-        </div>
-        <!--  -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
+    </header>
+    <section class="hero-section">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="">
-                        <img src="/assets/images/home-4-slider-img.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption carousel-title">
-                            <h4 class="home-4-title carousel-title-1">Lorem Ispum</h4>
-                            <p class="home-4-p-tag carousel-title-1">Some representative placeholder content for the
-                                first slide.</p>
-                            <div><a href="" class="btn btn-danger">Contact US</a></div>
-                        </div>
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <div class="hero-slider-image">
+                        <img src="../../assets/images/slider image 2.png" class="img-fluid hero-image w-100 h-100"
+                            alt="...">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h2 class="hero-slider-title">Grow Your Digital Marketing Revenue</h2>
+                        <p class="short-message">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Explicabo
+                            suscipit asperiores fugiat
+                            distinctio ex perspiciatis repellendus.</p>
+                        <div class="d-flex justify-content-center mt-3"><a href="#" class="btn">Our Projects</a></div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <div class="hero-slider-image">
+                        <img src="../../assets/images/slider image 1.png" class="img-fluid hero-image w-100 h-100"
+                            alt="...">
+                        <div class="hero-overlay"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h2 class="hero-slider-title">We are the top agency in town</h2>
+                        <p class="short-message">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Explicabo
+                            suscipit asperiores fugiat
+                            distinctio ex perspiciatis repellendus.</p>
+                        <div class="d-flex justify-content-center mt-3"><a href="#" class="btn">Our Projects</a></div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="">
-                        <img src="/assets/images/home-4slider.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption carousel-title">
-                            <h4 class="home-4-title carousel-title-1">Lorem Ispum</h4>
-                            <p class="home-4-p-tag carousel-title-1">Some representative placeholder content for the
-                                first slide.</p>
-                            <div><a href="" class="btn btn-danger">Contact US</a></div>
-                        </div>
+                    <div class="hero-slider-image">
+                        <img src="../../assets/images/slider image 3.png" class="img-fluid hero-image w-100 h-100"
+                            alt="...">
+                        <div class="hero-overlay"></div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="">
-                        <img src="/assets/images/home-4-slider-img.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption carousel-title">
-                            <h4 class="home-4-title carousel-title-1">Lorem Ispum</h4>
-                            <p class="home-4-p-tag carousel-title-1">Some representative placeholder content for the
-                                first slide.</p>
-                            <div><a href="" class="btn btn-danger">Contact US</a></div>
-                        </div>
+                    <div class="carousel-caption">
+                        <h2 class="hero-slider-title">Grow Your Digital Marketing Revenue</h2>
+                        <p class="short-message">Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Explicabo
+                            suscipit asperiores fugiat
+                            distinctio ex perspiciatis repellendus.</p>
+                        <div class="d-flex justify-content-center mt-3"><a href="#" class="btn">Our Projects</a></div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <i class="fa-solid fa-circle-arrow-left fs-1"></i>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <i class="fa-solid fa-circle-arrow-right fs-1"></i>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <!-- news letter end -->
-        <!-- our services start -->
-        <section class="pt-5">
-            <div class="container">
-                <div class="row">
-                    <h2 class="text-center py-3 text-black">OUR <span class="text-danger fs-1 fw-normal">SERVICES</span>
-                    </h2>
-                    <p class="text-center pb-4 text-black" style="width: 80%; margin: auto;">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit. Donec pulvinar lacus at
-                        feugiat iaculis.
-                        Suspendisse at viverra mauris, sit amet facilisis lectus. Pellentesque mattis auctor quam, et
-                        feugiat elit volutpat vel.</p>
-                </div>
-                <div class="row reveal fade-bottom">
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <figure><img src="/assets/images/bg-img-1.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <p>“Nam sed odio diam. Mauris sagittis sapien sed convallis cursus. Proin mattis
-                                            ultrices
-                                            urna ac eleifend. Cras vel nisi nec lectus sagittis venenatis. Curabitur
-                                            laoreet
-                                            leo
-                                            sed
-                                            lorem pulvina”</p>
-                                    </div>
-                                    <div style="display: flex; justify-content: end; padding: 0px 10px 10px 0px;"><a
-                                            class="btn text-danger">Read More <i
-                                                class="fa-regular fa-circle-right text-black"></i></a></div>
-                                </div>
-                            </div>
+    </section>
+    <div class="container p-5">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="text-center">
+
+
+                        <div class="img-hover-zoom img-hover-zoom--colorize">
+                            <img class="shadow" src="https://source.unsplash.com/rDEOVtE7vOs/600x600"
+                                alt="Another Image zoom-on-hover effect">
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <figure><img src="/assets/images/bg-img-3.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <p>“Nam sed odio diam. Mauris sagittis sapien sed convallis cursus. Proin mattis
-                                            ultrices
-                                            urna ac eleifend. Cras vel nisi nec lectus sagittis venenatis. Curabitur
-                                            laoreet
-                                            leo
-                                            sed
-                                            lorem pulvina”</p>
-                                    </div>
-                                    <div style="display: flex; justify-content: end; padding: 0px 10px 10px 0px;"><a
-                                            class="btn text-danger">Read More <i
-                                                class="fa-regular fa-circle-right text-black"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <figure><img src="/assets/images/bg-img-2.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <p>“Nam sed odio diam. Mauris sagittis sapien sed convallis cursus. Proin mattis
-                                            ultrices
-                                            urna ac eleifend. Cras vel nisi nec lectus sagittis venenatis. Curabitur
-                                            laoreet
-                                            leo
-                                            sed
-                                            lorem pulvina”</p>
-                                    </div>
-                                    <div style="display: flex; justify-content: end; padding: 0px 10px 10px 0px;"><a
-                                            class="btn text-danger">Read More <i
-                                                class="fa-regular fa-circle-right text-black"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <figure><img src="/assets/images/bg-img-3.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <p>“Nam sed odio diam. Mauris sagittis sapien sed convallis cursus. Proin mattis
-                                            ultrices
-                                            urna ac eleifend. Cras vel nisi nec lectus sagittis venenatis. Curabitur
-                                            laoreet
-                                            leo
-                                            sed
-                                            lorem pulvina”</p>
-                                    </div>
-                                    <div style="display: flex; justify-content: end; padding: 0px 10px 10px 0px;"><a
-                                            class="btn text-danger">Read More <i
-                                                class="fa-regular fa-circle-right text-black"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <figure><img src="/assets/images/bg-img-1.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <p>“Nam sed odio diam. Mauris sagittis sapien sed convallis cursus. Proin mattis
-                                            ultrices
-                                            urna ac eleifend. Cras vel nisi nec lectus sagittis venenatis. Curabitur
-                                            laoreet
-                                            leo
-                                            sed
-                                            lorem pulvina”</p>
-                                    </div>
-                                    <div style="display: flex; justify-content: end; padding: 0px 10px 10px 0px;"><a
-                                            class="btn text-danger">Read More <i
-                                                class="fa-regular fa-circle-right text-black"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <figure><img src="/assets/images/bg-img-2.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <p>“Nam sed odio diam. Mauris sagittis sapien sed convallis cursus. Proin mattis
-                                            ultrices
-                                            urna ac eleifend. Cras vel nisi nec lectus sagittis venenatis. Curabitur
-                                            laoreet
-                                            leo
-                                            sed
-                                            lorem pulvina”</p>
-                                    </div>
-                                    <div style="display: flex; justify-content: end; padding: 0px 10px 10px 0px;"><a
-                                            class="btn text-danger">Read More <i
-                                                class="fa-regular fa-circle-right text-black"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
 
-                </div>
-            </div>
-        </section>
-        <!-- our services end -->
-        <!-- quote start -->
-        <section class="py-5 quote-bg-img mt-5">
-            <div class="container">
-                <div class="row">
-                    <h2 class="text-center py-3 text-white">GET A <span class="text-danger fs-1 fw-normal">QUOTE</span>
-                    </h2>
-                    <p class="text-center pb-4 text-white" style="width: 80%; margin: auto;">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit. Donec pulvinar lacus at
-                        feugiat iaculis.
-                        Suspendisse at viverra mauris, sit amet facilisis lectus. Pellentesque mattis auctor quam, et
-                        feugiat elit volutpat vel.</p>
-                    <div class="py-5 d-flex justify-content-center" style="display: inline-block;"><a href="#"
-                            class="btn btn-danger text-white">Get a
-                            Quote
-                            <i class="fa-regular fa-circle-right text-white"></i></a></div>
-                </div>
-            </div>
-        </section>
-        <!-- quote end -->
-        <!-- our team start -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <h1 class="text-center py-3">OUR <span class="text-danger fs-1">TEAM</span></h1>
-                    <p class="text-center pb-4" style="width: 80%; margin: auto;">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit. Donec pulvinar lacus at
-                        feugiat iaculis.
-                        Suspendisse at viverra mauris, sit amet facilisis lectus. Pellentesque mattis auctor quam, et
-                        feugiat elit volutpat vel.</p>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="out-team-bg-img-1">
-                            <div class="our-team-card">
-                                <div class="zoomIn">
-                                    <figure> <img src="/assets/images/our-team-1.jpg" class="img-fluid" /></figure>
-                                </div>
-                                <h6 class="px-4 py-2 fs-5 text-white our-team-title">Danial Jain</h6>
-                                <div class="our-team-overlay">
-                                    <div class="our-team-icons d-flex flex-column gap-4 mt-3">
-                                        <i class="fa-brands fa-facebook-f fs-5"></i>
-                                        <i class="fa-brands fa-twitter fs-5"></i>
-                                        <i class="fa-brands fa-google-plus-g fs-5"></i>
-                                        <i class="fa-brands fa-facebook-f fs-5"></i>
-                                        <i class="fa-brands fa-whatsapp fs-5"></i>
-                                    </div>
-                                </div>
+                    <div class="card-body">
+                        <div class="clearfix mb-3">
+
+
+
+
+                        </div>
+
+
+                        <div class="my-2 text-center">
+
+                            <h1>Mia Wallace</h1>
+
+                        </div>
+                        <div class="mb-3">
+
+                            <h2 class="text-uppercase text-center role">Senior Frontend Developer</h2>
+
+                        </div>
+                        <div class="box">
+                            <div>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                                </ul>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="out-team-bg-img-1">
-                            <div class="our-team-card">
-                                <div class="zoomIn">
-                                    <figure> <img src="/assets/images/our-team-2.jpg" class="img-fluid" /></figure>
-                                </div>
-                                <h6 class="px-4 py-2 fs-5 text-white our-team-title">Danial Jain</h6>
-                                <div class="our-team-overlay">
-                                    <div class="our-team-icons d-flex flex-column gap-4 mt-3">
-                                        <i class="fa-brands fa-facebook-f fs-5"></i>
-                                        <i class="fa-brands fa-twitter fs-5"></i>
-                                        <i class="fa-brands fa-google-plus-g fs-5"></i>
-                                        <i class="fa-brands fa-facebook-f fs-5"></i>
-                                        <i class="fa-brands fa-whatsapp fs-5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="out-team-bg-img-1">
-                            <div class="our-team-card">
-                                <div class="zoomIn">
-                                    <figure> <img src="/assets/images/our-team-3.jpg" class="img-fluid" /></figure>
-                                </div>
-                                <h6 class="px-4 py-2 fs-5 text-white our-team-title">Danial Jain</h6>
-                                <div class="our-team-overlay">
-                                    <div class="our-team-icons d-flex flex-column gap-4 mt-3">
-                                        <i class="fa-brands fa-facebook-f fs-5"></i>
-                                        <i class="fa-brands fa-twitter fs-5"></i>
-                                        <i class="fa-brands fa-google-plus-g fs-5"></i>
-                                        <i class="fa-brands fa-facebook-f fs-5"></i>
-                                        <i class="fa-brands fa-whatsapp fs-5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- our team end -->
-        <!-- our blog start -->
-        <section class="pb-5 pt-4" style="background-color: #cccccc21;">
-            <div class="container">
-                <div class="row">
-                    <h2 class="text-center py-3 text-black">OUR <span class="text-danger fs-1 fw-normal">BLOG</span>
-                    </h2>
-                    <p class="text-center pb-4 text-black" style="width: 80%; margin: auto;">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit. Donec pulvinar lacus at
-                        feugiat iaculis.
-                        Suspendisse at viverra mauris, sit amet facilisis lectus. Pellentesque mattis auctor quam, et
-                        feugiat elit volutpat vel.</p>
-                </div>
-                <div class="row reveal fade-bottom">
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <div class="overlay-top-bottom"></div>
-                                <figure><img src="/assets/images/purity-1.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <h6 class="text-danger">Jesscia Brown <i
-                                                class="fa-solid fa-grip-lines-vertical"></i> <span
-                                                class="fw-normal text-danger">
-                                                2 Comments</span></h6>
-                                        <h6>Donec faucibus tellus quis turpis tempor</h6>
-                                        <p>Lorem Ipsum is simply text of the printing and orem ipsum has been the
-                                            industry's
-                                            dummy text evern.</p>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="text-center">
+
+
+                        <div class="img-hover-zoom img-hover-zoom--colorize">
+                            <img class="shadow" src="https://source.unsplash.com/XHVpWcr5grQ/600x600"
+                                alt="Another Image zoom-on-hover effect">
                         </div>
+
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <div class="overlay-top-bottom"></div>
-                                <figure><img src="/assets/images/purity-2.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <h6 class="text-danger">Jesscia Brown <i
-                                                class="fa-solid fa-grip-lines-vertical"></i> <span
-                                                class="fw-normal text-danger">
-                                                2 Comments</span></h6>
-                                        <h6>Donec faucibus tellus quis turpis tempor</h6>
-                                        <p>Lorem Ipsum is simply text of the printing and orem ipsum has been the
-                                            industry's
-                                            dummy text evern.</p>
-                                    </div>
-                                </div>
+
+                    <div class="card-body">
+                        <div class="clearfix mb-3">
+
+
+
+
+                        </div>
+
+
+                        <div class="my-2 text-center">
+
+                            <h1>Vincent Vega</h1>
+
+                        </div>
+                        <div class="mb-3">
+
+                            <h2 class="text-uppercase text-center role">SEO Specialist</h2>
+
+                        </div>
+                        <div class="box">
+                            <div>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                                </ul>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-4 py-2 reveal fade-left">
-                        <div class="card-container">
-                            <div class="zoomIn">
-                                <div class="overlay-top-bottom"></div>
-                                <figure><img src="/assets/images/purity-3.jpg" class="img-fluid card-img-top" alt="...">
-                                </figure>
-                                <div class="card p-1 shadow-sm our-history-card mt-2">
-                                    <div class="card-body">
-                                        <h6 class="text-danger">Jesscia Brown <i
-                                                class="fa-solid fa-grip-lines-vertical"></i> <span
-                                                class="fw-normal text-danger">
-                                                2 Comments</span></h6>
-                                        <h6>Donec faucibus tellus quis turpis tempor</h6>
-                                        <p>Lorem Ipsum is simply text of the printing and orem ipsum has been the
-                                            industry's
-                                            dummy text evern.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- our blog end -->
-        <!-- Footer Start -->
-        <div class="container-fluid site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <a href="/"><img src="/assets/images/logo/logo.png" style="height: 4rem;" alt="image" /></a>
-                        <p class="mt-2 d-flex justify-content-between">Lorem Ipsum is simply dummy text of the printing
-                            and
-                            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                            1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book.</p>
-                        <div class="d-grid col-6 pb-3">
-                            <a href="/pages/about-us/company-profile.html" class="btn btn-light read-more-btn">KNOW
-                                MORE</a>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="text-center">
+
+
+                        <div class="img-hover-zoom img-hover-zoom--colorize">
+                            <img class="shadow" src="https://source.unsplash.com/n4KewLKFOZw/600x600"
+                                alt="Another Image zoom-on-hover effect">
                         </div>
+
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="site-footer-list">
-                            <li>USEFUL LINKS </li>
-                            <li>Board of Directors</li>
-                            <li>Corporate Social</li>
-                            <li>Responsibility</li>
-                            <li>Supplier & Vendor</li>
-                            <li>Relations</li>
-                            <li>Achievements/ Awards</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2 col-sm-6">
-                        <ul class="site-footer-list">
-                            <li>SHORTCUTS </li>
-                            <li>Landmark Projects</li>
-                            <li>News & Features</li>
-                            <li>Testimonials</li>
-                            <li>Offices and Plants</li>
-                            <li>Order Online</li>
-                            <li>Knowledge Hub</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <ul class="site-footer-list">
-                            <li>CONTACT US </li>
-                            <li><i class="fa-solid fa-phone-volume"></i> +88 02 3333 54901</li>
-                            <li><i class="fa-regular fa-envelope"></i> mail@elitesteel.com</li>
-                        </ul>
-                        <div class="embed-responsive embed-responsive-16by9 mx-auto footer-map">
-                            <iframe class="embed-responsive-item w-100"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.982783606409!2d90.42129269678956!3d23.783627400000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b903f021fd45%3A0x7ae5861fc753898c!2sNano%20Information%20Technology%20(Nanosoft)!5e0!3m2!1sen!2sbd!4v1696136843646!5m2!1sen!2sbd"
-                                style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <div class="card-body">
+                        <div class="clearfix mb-3">
+
+
+
                         </div>
+
+
+                        <div class="my-2 text-center">
+
+                            <h1>Mr. Wolf</h1>
+
+                        </div>
+                        <div class="mb-3">
+
+                            <h2 class="text-uppercase text-center role">DIGITAL MARKETING SPECIALIST</h2>
+
+                        </div>
+                        <div class="box">
+                            <div>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
-                <hr />
-                <div class="row mx-auto">
-                    <div class="d-flex justify-content-center gap-4">
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="text-center">
 
-                        <a href="#"><i class="fa-brands fa-twitter top-nav-icon rounded-circle bg-dark p-2"></i></a>
 
-                        <a href="#"><i class="fa-brands fa-facebook top-nav-icon rounded-circle bg-dark p-2"></i></a>
-
-                        <a href="#"><i class="fa-brands fa-pinterest-p top-nav-icon rounded-circle bg-dark p-2"></i></a>
-
-                        <a href="#"><i class="fa-brands fa-instagram top-nav-icon rounded-circle bg-dark p-2"></i></a>
+                        <div class="img-hover-zoom img-hover-zoom--colorize">
+                            <img class="shadow" src="https://source.unsplash.com/B4TjXnI0Y2c/600x600"
+                                alt="Another Image zoom-on-hover effect">
+                        </div>
 
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <!-- <p>© Copyright 2023 by <span class="text-white fs-5"> ELITE STEEL </span></p> -->
-                        <p>© Copyright© 2012-2013 Elite Iron & Steel Industries Ltd. Developed By: Nano Information
-                            Technology</p>
+
+                    <div class="card-body">
+                        <div class="clearfix mb-3">
+
+
+                        </div>
+
+
+                        <div class="my-2 text-center">
+
+                            <h1>O-Ren Ishii</h1>
+
+                        </div>
+                        <div class="mb-3">
+
+                            <h2 class="text-uppercase text-center role">Web Developer</h2>
+
+                        </div>
+                        <div class="box">
+                            <div>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-linkedin-in"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                                    <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- slick slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
+
+
+    </div>
+
+    <div class="small text-muted my-4">Images by <a target="_blank"
+            href="https://source.unsplash.com/">https://source.unsplash.com/</a></div>
+    <!-- custom js -->
+    <script src="./assets/js/main.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const cursorElement = document.createElement("div");
+            cursorElement.classList.add("custom-cursor");
+            document.body.appendChild(cursorElement);
+            document.body.classList.add("custom-cursor-active");
+
+            document.addEventListener("mousemove", (e) => {
+                cursorElement.setAttribute(
+                    "style",
+                    "top: " + e.pageY + "px; left:" + e.pageX + "px;"
+                );
+            });
+
+            const customEventElements = document.querySelectorAll(
+                '[data-cursor-event="hover"]'
+            );
+
+            customEventElements.forEach(function (customElement) {
+                let currentCustomElement = customElement;
+                customElement.addEventListener("mouseenter", (e) => {
+                    cursorElement.classList.add(
+                        currentCustomElement.getAttribute("data-event-class")
+                    );
+                });
+                customElement.addEventListener("mouseout", (e) => {
+                    cursorElement.classList.remove(
+                        currentCustomElement.getAttribute("data-event-class")
+                    );
+                });
+            });
+
+            document.addEventListener("click", () => {
+                cursorElement.classList.add("custom-cursor-click");
+
+                setTimeout(() => {
+                    cursorElement.classList.remove("custom-cursor-click");
+                }, 500);
+            });
+        });
+    </script>
+    <!-- bootstrap 5 main.js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

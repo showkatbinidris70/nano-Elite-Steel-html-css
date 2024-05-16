@@ -20,6 +20,7 @@
     <!-- swipper carousel end -->
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/home3.style.css" />
     <!-- custom JS -->
     <script src="/assets/js/main.js"></script>
     <!-- slick carousel -->
@@ -33,62 +34,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
     <title>Elite Steel Home Page 3</title>
     <style>
-        .reveal {
-            position: relative;
-            opacity: 0;
-        }
 
-        .reveal.active {
-            opacity: 1;
-        }
-
-        .active.fade-bottom {
-            animation: fade-bottom 0.5s ease-in;
-        }
-
-        .active.fade-left {
-            animation: fade-left 0.5s ease-in;
-        }
-
-        .active.fade-right {
-            animation: fade-right 0.5s ease-in;
-        }
-
-        @keyframes fade-bottom {
-            0% {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-left {
-            0% {
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-right {
-            0% {
-                transform: translateX(100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
     </style>
 
 </head>
@@ -138,7 +84,7 @@
         <!-- Navbar  start-->
         <nav class="sticky-div">
             <div class="container-fluid nav-bg-color  navbar-border">
-                <div class="container">
+                <div class="container sticky-top">
                     <nav class="navbar navbar-expand-lg navbar-light nav-bg-colors">
                         <div>
                             <a class="navbar-brand logo img-fluid" href="/" onclick="route()"><img
@@ -152,10 +98,6 @@
                         </button>
                         <div class="collapse navbar-collapse mt-1" id="navbarTogglerDemo02">
                             <ul class="navbar-nav mb-2 mb-lg-0 navbar-possition">
-                                <!-- <li class="nav-item">
-                                <a class="nav-link megamenu-color text-shadow-color " aria-current="page"
-                                    href="/">Home</a>
-                            </li> -->
                                 <li class="nav-item dropdown has-megamenu">
                                     <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
                                         id='dropdownMenuButtonHome' href="#">
@@ -165,6 +107,7 @@
                                         <li><a class="dropdown-item" href="/pages/home/home-1.html">Home 1</a></li>
                                         <li><a class="dropdown-item" href="/pages/home/home-2.html">Home 2</a></li>
                                         <li><a class="dropdown-item" href="/pages/home/home-3.html">Home 3</a></li>
+                                        <li><a class="dropdown-item" href="/pages/home/home-4.html">Home 4</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
@@ -300,10 +243,6 @@
                                     <a class="nav-link dropdown megamenu-color text-shadow-color"
                                         href="/pages/contact-us/contact-us.html"> Contact Us </a>
                                 </li>
-                                <!-- <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color" href="/contact-us"
-                                        onclick="route()" data-bs-toggle="dropdown"> Contact Us </a>
-                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link megamenu-color search-bar text-shadow-color" href="#"
                                         data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
@@ -317,14 +256,23 @@
         </nav>
         <!-- Navbar Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdrop" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-control">
-                <div class="modal-content" id="addon-wrapping">
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Username"
-                        aria-describedby="addon-wrapping">
+        aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-control">
+            <div class="modal-content" id="addon-wrapping">
+                <div class="input-group">
+                    <input class="form-control border-end-0 border" type="search" value="search"
+                        id="example-search-input">
+                    <span class="input-group-append">
+                        <button
+                            class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                            type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
                 </div>
             </div>
         </div>
+    </div>
         <!-- main content start -->
         <!-- slider start -->
         <div class="home-4-top-slider" style="background-color:#111111">

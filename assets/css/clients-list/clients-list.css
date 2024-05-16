@@ -1,0 +1,17 @@
+.client-item {
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.client-item:hover {
+  background-color: #e7eaec;
+}
+.custom-text-size {
+  font-size: 10px;
+}
+
+.client-bg-color {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 5px;
+}

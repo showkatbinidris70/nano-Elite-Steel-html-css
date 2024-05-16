@@ -17,6 +17,7 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/home1.css" />
     <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,147 +26,7 @@
     <!-- Product Slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
     <title>Elite Steel Home Page 1</title>
-    <style>
-        @media (max-width: 767px) {
-            .carousel-inner .carousel-item>div {
-                display: none
-            }
 
-            .carousel-inner .carousel-item>div:first-child {
-                display: block
-            }
-        }
-
-        .carousel-inner .carousel-item.active,
-        .carousel-inner .carousel-item-next,
-        .carousel-inner .carousel-item-prev {
-            display: flex
-        }
-
-        @media (min-width: 768px) {
-
-            .carousel-inner .carousel-item-end.active,
-            .carousel-inner .carousel-item-next {
-                transform: translateX(25%)
-            }
-
-            .carousel-inner .carousel-item-start.active,
-            .carousel-inner .carousel-item-prev {
-                transform: translateX(-25%)
-            }
-        }
-
-        .carousel-inner .carousel-item-end,
-        .carousel-inner .carousel-item-start {
-            transform: translateX(0)
-        }
-
-        .hero-video {
-            width: 100%;
-            height: 100vh;
-
-        }
-    </style>
-    <style>
-        @media screen and (max-width: 650px) {
-
-            .scroll-container,
-            .scroll-container:nth-of-type(even) {
-                flex-direction: column;
-                align-content: inherit;
-            }
-
-            .scroll-element {
-                height: 100%;
-            }
-
-            .scroll-element {
-                width: 100%;
-            }
-        }
-
-        /**Styling scrollable elements*/
-
-        .js-scroll {
-            opacity: 0;
-            transition: opacity 500ms;
-        }
-
-        .js-scroll.scrolled {
-            opacity: 1;
-        }
-
-        .scrolled.slide-left {
-            animation: slide-in-left 1s ease-in-out both;
-        }
-
-        .scrolled.slide-right {
-            animation: slide-in-right 1s ease-in-out both;
-        }
-
-
-        @keyframes slide-in-left {
-            0% {
-                -webkit-transform: translateX(-100px);
-                transform: translateX(-100px);
-                opacity: 0;
-            }
-
-            100% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slide-in-right {
-            0% {
-                -webkit-transform: translateX(100px);
-                transform: translateX(100px);
-                opacity: 0;
-            }
-
-            100% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .bg-video {
-            /* background-image: url("/assets/videos/bg-video.mp4"); */
-            background-image: url("/assets/images/testiominaol-img-1.webp");
-
-        }
-
-        video {
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        }
-
-        .video-wrapper {
-            width: 100%;
-            height: auto;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 0.8rem;
-            margin-left: 0.7rem;
-        }
-
-        .header {
-            position: relative;
-            color: white;
-            text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
-        }
-    </style>
 </head>
 
 <body>
@@ -211,7 +72,7 @@
     <!-- Navbar  start-->
     <nav class="sticky-div">
         <div class="container-fluid nav-bg-color  navbar-border">
-            <div class="container">
+            <div class="container sticky-top">
                 <nav class="navbar navbar-expand-lg navbar-light nav-bg-colors">
                     <div>
                         <a class="navbar-brand logo img-fluid" href="/" onclick="route()"><img
@@ -225,10 +86,6 @@
                     </button>
                     <div class="collapse navbar-collapse mt-1" id="navbarTogglerDemo02">
                         <ul class="navbar-nav mb-2 mb-lg-0 navbar-possition">
-                            <!-- <li class="nav-item">
-                            <a class="nav-link megamenu-color text-shadow-color " aria-current="page"
-                                href="/">Home</a>
-                        </li> -->
                             <li class="nav-item dropdown has-megamenu">
                                 <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
                                     id='dropdownMenuButtonHome' href="#">
@@ -238,6 +95,7 @@
                                     <li><a class="dropdown-item" href="/pages/home/home-1.html">Home 1</a></li>
                                     <li><a class="dropdown-item" href="/pages/home/home-2.html">Home 2</a></li>
                                     <li><a class="dropdown-item" href="/pages/home/home-3.html">Home 3</a></li>
+                                    <li><a class="dropdown-item" href="/pages/home/home-4.html">Home 4</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown has-megamenu">
@@ -368,10 +226,6 @@
                                 <a class="nav-link dropdown megamenu-color text-shadow-color"
                                     href="/pages/contact-us/contact-us.html"> Contact Us </a>
                             </li>
-                            <!-- <li class="nav-item dropdown has-megamenu">
-                                <a class="nav-link dropdown megamenu-color text-shadow-color" href="/contact-us"
-                                    onclick="route()" data-bs-toggle="dropdown"> Contact Us </a>
-                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link megamenu-color search-bar text-shadow-color" href="#"
                                     data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
@@ -388,8 +242,16 @@
         aria-hidden="true">
         <div class="modal-dialog modal-xl modal-control">
             <div class="modal-content" id="addon-wrapping">
-                <input type="text" class="form-control" placeholder="Search" aria-label="Username"
-                    aria-describedby="addon-wrapping">
+                <div class="input-group">
+                    <input class="form-control border-end-0 border" type="search" value="search"
+                        id="example-search-input">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                            type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
