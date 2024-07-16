@@ -2007,8 +2007,8 @@ h1 {
 }
 .footer-map {
   width: 90%;
-  margin-left: auto;
-  padding-left: 1rem;
+  margin-left: 35px;
+  /* padding-left: 1rem; */
 }
 /* ================== Site Footer End  ========================*/
 
@@ -2021,8 +2021,9 @@ h1 {
   }
   .footer-map {
     width: 100%;
-    margin-left: auto;
-    padding-left: 0rem;
+    /* margin-left: auto; */
+    margin-left: 15px;
+    /* padding-left: 0rem; */
   }
 }
 @media screen and (min-width: 320px) and (max-width: 375.98px) {
@@ -2031,7 +2032,8 @@ h1 {
   }
   .footer-map {
     width: 100%;
-    margin-left: auto;
-    padding-left: 0rem;
+    /* margin-left: auto; */
+    /* padding-left: 0rem; */
+    margin-left: 10px;
   }
 }
