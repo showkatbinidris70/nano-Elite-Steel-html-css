@@ -331,9 +331,15 @@ nav .text-shadow-color:active::before {
   .col-megamenu img {
     display: none;
   }
-  .search-bar {
-    display: none;
+  #staticBackdrop {
+    top: 10vh;
   }
+  /* .input-group {
+    width: 100%;
+  } */
+  /* .modal .input-group .form-control {
+    width: 90%;
+  } */
 }
 /* ============ mobile view .end// ============ */
 /*========================== Navbar End ==========================*/
@@ -617,6 +623,12 @@ nav .text-shadow-color:active::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.swiper-button-next {
+  margin-top: -3.5rem !important;
+}
+.swiper-button-prev {
+  margin-top: -3.5rem !important;
 }
 /* Circle */
 .hover15 figure {
@@ -2093,6 +2105,7 @@ h1 {
   right: 30px;
   z-index: 100;
   opacity: 0;
+  padding-right: 20px !important;
   transform: translateY(100px);
   transition: all 0.5s ease;
 }
@@ -2127,4 +2140,7 @@ h1 {
     /* padding-left: 0rem; */
     margin-left: 10px;
   }
+  /* .modal .input-group .form-control {
+    display: none;
+  } */
 }
