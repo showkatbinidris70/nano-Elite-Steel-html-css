@@ -176,3 +176,5 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+// copy right
+document.getElementById("year").innerHTML = new Date().getFullYear();
