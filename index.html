@@ -125,10 +125,14 @@
                         <div class="collapse navbar-collapse mt-1" id="navbarTogglerDemo02">
                             <ul class="navbar-nav mb-2 mb-lg-0 navbar-possition">
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    <a class="nav-link dropdown-toggle megamenu-color text-shadow-color cursor-pointer"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"
                                         id='dropdownMenuButtonHome' href="#">
                                         Home
                                     </a>
+                                    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                      </a> -->
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonHome">
                                         <li><a class="dropdown-item" href="/pages/home/home-1.html">Home 1</a></li>
                                         <li><a class="dropdown-item" href="/pages/home/home-2.html">Home 2</a></li>
@@ -137,7 +141,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer "
+                                    <a class="nav-link dropdown-toggle megamenu-color text-shadow-color cursor-pointer "
                                         id="dropdownMenuButtonAboutUS" href="#">
                                         About Us
                                     </a>
@@ -160,7 +164,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    <a class="nav-link dropdown-toggle megamenu-color text-shadow-color cursor-pointer"
                                         id="dropdownMenuButtonProducts" href="#">
                                         Products
                                     </a>
@@ -179,7 +183,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    <a class="nav-link dropdown-toggle megamenu-color text-shadow-color cursor-pointer"
                                         id="dropdownMenuButtonQualityControl" href="#">
                                         Quality
                                         Control </a>
@@ -217,7 +221,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    <a class="nav-link dropdown-toggle megamenu-color text-shadow-color cursor-pointer"
                                         id="dropdownMenuButtonCustomerCare" href="#">
                                         Customer
                                         Care </a>
@@ -234,12 +238,12 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color"
+                                    <a class="nav-link megamenu-color text-shadow-color text-nowrap"
                                         href="/pages/clients-list/clients-list.html"> Key
                                         Clients List </a>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color cursor-pointer"
+                                    <a class="nav-link dropdown-toggle megamenu-color text-shadow-color cursor-pointer"
                                         id="dropdownMenuButtonSisterConcerns" href="#">
                                         Sister
                                         Concerns </a>
@@ -272,8 +276,9 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown has-megamenu">
-                                    <a class="nav-link dropdown megamenu-color text-shadow-color"
-                                        href="/pages/contact-us/contact-us.html"> Contact Us </a>
+                                    <a class="nav-link megamenu-color text-shadow-color text-nowrap"
+                                        href="/pages/contact-us/contact-us.html">
+                                        Contact Us </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link megamenu-color search-bar text-shadow-color" href="#"
@@ -286,12 +291,6 @@
                 </div>
             </div>
         </nav>
-        <div class="input-group d-none">
-            <input type="text" class="form-control" placeholder="Search ......" aria-label="Recipient's username">
-            <div class="input-group-append bg-transparent">
-                <span class="input-group-text pb-3 bg-transparent border-0"><i class="fa fa-search pt-3"></i></span>
-            </div>
-        </div>
         <!-- Navbar Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdrop" aria-hidden="true">
@@ -745,7 +744,9 @@
             </div>
         </div>
         <!-- ====== SCROLL TO TOP BUTTON ====== -->
-        <button class="scrollToTopBtn mx-auto">☝️</button>
+        <button class="scrollToTopBtn">
+            <div class="mx-auto" style="padding-left: 10px;"><i class="fa-solid fa-chevron-up"></i></div>
+        </button>
     </div>
 
     <!-- Bootstrap JS -->

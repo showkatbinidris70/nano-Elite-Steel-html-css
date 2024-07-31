@@ -194,7 +194,8 @@ p {
 /* Top Navbar End */
 /* =================== Navbar Start ================================*/
 .logo img {
-  width: 15rem;
+  max-width: 15rem;
+  width: 100%;
 }
 .sticky-div {
   position: sticky;
@@ -243,6 +244,7 @@ p {
   transition: opacity 0.3s ease-in-out;
   border: none;
   transition: all 1s ease;
+  background-color: #d14033;
 }
 @media screen and (max-width: 767px) {
   .dropdown:hover > .dropdown-menu {
@@ -2119,6 +2121,12 @@ h1 {
 /* media query start */
 /* footer start */
 /* @media screen and (max-width: 900px) and (min-width: 600px) {} */
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+  }
+}
 @media screen and (min-width: 376px) and (max-width: 575.98px) {
   .site-footer-list {
     padding-left: 1rem;
